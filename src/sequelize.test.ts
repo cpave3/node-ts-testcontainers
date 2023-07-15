@@ -44,7 +44,7 @@ describe("should connect and return a query result", () => {
     // Close connections
     await client.close();
     await container.stop();
-  });
+  }, 25000);
 
   it("works with mysql", async () => {
     // Create a container using testcontainers
@@ -97,5 +97,5 @@ describe("should connect and return a query result", () => {
     // Close connections
     await client.close();
     await container.stop();
-  }, 15000);
+  }, 25000);
 });
